@@ -21,6 +21,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: ${{ matrix.java-version }}
+        distribution: 'temurin'
         
     - name: Build tests in Maven
       run: mvn -B clean verify
